@@ -1,8 +1,13 @@
 from Bio import SeqIO
 
+file_name_1 = 'B - NC_045512.2.fa'
+file_name_2 = 'B.1.1.519 - OK341237.1.fa'
+
 file_type = 'fasta'
-file_path_1 = 'aligned_fasta_files/B - NC_045512.2.fa'
-file_path_2 = 'aligned_fasta_files/B.1.1.519 - OK341237.1.fa'
+folder = 'aligned_fasta_files'
+
+file_path_1 = '{}/{}'.format(folder, file_name_1)
+file_path_2 = '{}/{}'.format(folder, file_name_2)
 
 bio_seq_1 = SeqIO.read(file_path_1, file_type)
 bio_seq_2 = SeqIO.read(file_path_2, file_type)
